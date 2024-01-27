@@ -88,7 +88,7 @@ class JSON_constructor extends React.Component {
   //[age, setAge] = this.useState('');
 
   handleChange = (event: SelectChangeEvent) => {
-        this.setState({set: true});
+        this.setState({age: event.target.value, set: true});
       };
 
   render() {
