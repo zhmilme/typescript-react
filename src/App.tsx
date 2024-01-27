@@ -156,23 +156,8 @@ export default function App() {
     //()=>setAllowResize(false)
     return (
         <main>
-            <div style={{ height: window.innerHeight, width: 1200}}>
-              <SplitPane
-                split='vertical'
-                sizes={sizes}
-                //onChange={setSizes}
-                  //sashRender={(index: 0, active: true) => {this}}
-              >
-                <Pane minSize={'50%'} maxSize='95%'>
-                  <div style={{ ...layoutCSS, background: '#ddd' }}>
+
                       <JSON_constructor/>
-                  </div>
-                </Pane>
-                <div style={{ ...layoutCSS, background: '#000111' }}>
-                  pane2
-                </div>
-              </SplitPane>
-            </div>
 
         </main>
     )
