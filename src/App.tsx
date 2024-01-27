@@ -140,7 +140,7 @@ class JSON_constructor extends React.Component {
                   </Collapse>
               </Draggable>
         </div>
-        <Draggable position= {controlledPosition} onStart={() => false}>
+        <Draggable position= {controlledPosition}>
           <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
