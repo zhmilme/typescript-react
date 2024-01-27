@@ -120,8 +120,8 @@ class JSON_constructor extends React.Component {
                         value={this.state.age as string}
                         label="Age"
                         onChange={this.handleChange}
-                        renderValue={(age) => {
-                          if (age.length === 0) {
+                        renderValue={(this.stage.age) => {
+                          if (this.stage.age.length === 0) {
                             return <em>Placeholder</em>;
                           }
                         }}
