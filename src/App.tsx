@@ -140,7 +140,21 @@ class JSON_constructor extends React.Component {
                   </Collapse>
               </Draggable>
         </div>
-
+          <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={this.state.age as string}
+              label="Age"
+              onChange={this.handleChange}
+              displayEmpty
+          >
+              <MenuItem disabled value="">
+                <em>Placeholder</em>
+              </MenuItem>
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
       </div>
     );
   }
