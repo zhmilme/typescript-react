@@ -120,6 +120,7 @@ class JSON_constructor extends React.Component {
                         value={this.state.age as string}
                         label="Age"
                         onChange={this.handleChange}
+                        placeholder="select"
                     >
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
