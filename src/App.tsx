@@ -160,8 +160,8 @@ export default function App() {
               <SplitPane
                 split='vertical'
                 sizes={sizes}
-                onChange={setSizes}
-                  sashRender={(index: 0, active: true) => {this}}
+                //onChange={setSizes}
+                  //sashRender={(index: 0, active: true) => {this}}
               >
                 <Pane minSize={'50%'} maxSize='95%'>
                   <div style={{ ...layoutCSS, background: '#ddd' }}>
