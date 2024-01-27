@@ -144,16 +144,6 @@ class JSON_constructor extends React.Component {
 
 
 export default function App() {
-    const [sizes, setSizes] = useState([1000, '50%', 'auto'])
-
-    const layoutCSS = {
-        height: '100%',
-        width: '100%',
-        display: 'grid',
-        //alignItems: 'center',
-        //justifyContent: 'center'
-    }
-    //()=>setAllowResize(false)
     return (
         <main>
 
