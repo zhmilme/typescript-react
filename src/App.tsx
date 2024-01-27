@@ -115,6 +115,7 @@ class JSON_constructor extends React.Component {
                 </Draggable>
                 <Draggable position= {{x: controlledPosition.x - 140, y: controlledPosition.y - 30}} onStart={() => false}>
                     <Select
+                        displayEmpty
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={this.state.age as string}
