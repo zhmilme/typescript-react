@@ -1,4 +1,4 @@
-import './App.css'
+//import './App.css'
 import * as React from 'react'
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
@@ -10,8 +10,8 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { Option } from '@mui/base/Option';
 import Collapse from '@mui/material/Collapse';
 import Grow from '@mui/material/Grow';
-import SplitPane, { Pane } from 'split-pane-react';
-import 'split-pane-react/esm/themes/default.css';
+//import SplitPane, { Pane } from 'split-pane-react';
+//import 'split-pane-react/esm/themes/default.css';
 //import BasicSelect from './select';
 
 
@@ -145,7 +145,7 @@ class JSON_constructor extends React.Component {
 
 export default function App() {
     return (
-        <main>
+        <main style={{ background: "grey", height: "1000px", width: "1000px"}}>
 
                       <JSON_constructor/>
 
