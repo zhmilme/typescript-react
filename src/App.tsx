@@ -124,8 +124,6 @@ class JSON_constructor extends React.Component {
                           if (selected.length === 0) {
                             return <em>Placeholder</em>;
                           }
-
-                          return selected.join(', ');
                         }}
                         >
                         <MenuItem value={10}>Ten</MenuItem>
