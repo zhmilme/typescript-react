@@ -97,7 +97,35 @@ class JSON_constructor extends React.Component {
     return (
       <div>
           <div>
-
+                <Draggable cancel="strong" {...dragHandlers}>
+                  <div className="box">
+                    <strong className="no-cursor">              
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={this.state.age as string}
+                        label="Age"
+                        onChange={this.handleChange}
+                        displayEmpty
+                        style={{top: "-50px", left: "-130px"}}
+                      >
+                        <MenuItem disabled value="">
+                          <em>Select</em>
+                        </MenuItem>
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                      </Select>  
+                    </strong>
+                      <div>                        
+                        <svg width="162px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" opacity='1'>
+                            <g>    
+                                <path style={{fill: 'rgb(216, 216, 216)', stroke: 'rgb(0, 0, 0)'}} d="M 10.644 2 L 140.644 2 L 140.644 92 L 10.644 92 L 10.644 56.901 C 5.176 56.901 0.743 52.468 0.743 47 C 0.743 41.532 5.176 37.099 10.644 37.099 L 10.644 2 Z"></path>
+                            </g>
+                        </svg>
+                      </div>
+                  </div>
+                </Draggable>
                 <Draggable onDrag={this.handleDrag} {...dragHandlers}>
                     <svg width="72px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" opacity='1'>
                         <g>
