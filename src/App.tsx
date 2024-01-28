@@ -154,7 +154,7 @@ class JSON_constructor extends React.Component {
                 label="Age"
                 onChange={this.handleChange}
                 displayEmpty
-                style={{top: "10px", left: "-150px"}}
+                style={{top: "50px", left: "-130px"}}
               >
                 <MenuItem disabled value="">
                   <em>Select</em>
