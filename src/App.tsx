@@ -159,7 +159,7 @@ class JSON_constructor extends React.Component {
                 style={{top: "-70px", left: "30px"}}
               >
                 <MenuItem disabled value="">
-                  <em>Placeholder</em>
+                  <em>Select</em>
                 </MenuItem>
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
