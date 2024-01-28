@@ -60,22 +60,6 @@ class JSON_constructor extends React.Component {
     e.target.classList.remove('hovered');
   }
 
-  // For controlled component
-  adjustXPos = (e: any) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const {x, y} = this.state.controlledPosition;
-    this.setState({controlledPosition: {x: x - 10, y}});
-  };
-
-  adjustYPos = (e: any) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const {controlledPosition} = this.state;
-    const {x, y} = controlledPosition;
-    this.setState({controlledPosition: {x, y: y - 10}});
-  };
-
   onControlledDrag = (e: any, position: any) => {
     const {x, y} = position;
     this.setState({controlledPosition: {x, y}});
