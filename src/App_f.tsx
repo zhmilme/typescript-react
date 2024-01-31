@@ -66,9 +66,7 @@ function JSON_constructor() {
       };*/
   const dragHandlers = {onStart: onStart, onStop: onStop}
   //const {deltaPosition, controlledPosition} = this.state
-  render() {;
-           ;
-    return (
+  return (
       <div>
           <div>
                 <Draggable cancel="strong" {...dragHandlers}>
@@ -184,7 +182,6 @@ function JSON_constructor() {
           </Select>
       </div>
     );
-  }
 }
 
 
