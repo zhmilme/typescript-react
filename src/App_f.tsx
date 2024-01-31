@@ -2,12 +2,12 @@
 import * as React from 'react'
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
-import Draggable, {DraggableCore} from 'react-draggable'; 
-import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { Option } from '@mui/base/Option';
-import Collapse from '@mui/material/Collapse';
-import Grow from '@mui/material/Grow';
+import Draggable, {DraggableCore} from 'react-draggable'
+import MenuItem from '@mui/material/MenuItem'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import { Option } from '@mui/base/Option'
+import Collapse from '@mui/material/Collapse'
+import Grow from '@mui/material/Grow'
 
 function JSON_constructor() {
   const [activeDrags, setActiveDrags] = useState(0)
