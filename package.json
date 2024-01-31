@@ -26,5 +26,8 @@
     "@mui/material": "^5.15.6",
     "react-draggable": "^4.4.6",
     "split-pane-react": "^0.1.3"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
