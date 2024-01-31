@@ -23,30 +23,30 @@ function JSON_constructor() {
   }
 
   const onStart = () => {
-    setActiveDrags(activeDrags + 1);
+    setActiveDrags(activeDrags + 1)
   }
 
   const onStop = () => {
-    setActiveDrags(activeDrags - 1);
+    setActiveDrags(activeDrags - 1)
   }
   const onDrop = (e: any) => {
-    setActiveDrags(activeDrags - 1);
+    setActiveDrags(activeDrags - 1)
     if (e.target.classList.contains("drop-target")) {
-      alert("Dropped!");
-      e.target.classList.remove('hovered');
+      alert("Dropped!")
+      e.target.classList.remove('hovered')
     }
   }
   const onDropAreaMouseEnter = (e: any) => {
     if (activeDrags) {
-      e.target.classList.add('hovered');
+      e.target.classList.add('hovered')
     }
-  };
+  }
   const onDropAreaMouseLeave = (e: any) => {
-    e.target.classList.remove('hovered');
-  };
+    e.target.classList.remove('hovered')
+  }
   const handleChange = (event: SelectChangeEvent) => {
-        setAge(event.target.value);
-      };
+        setAge(event.target.value)
+  }
   const dragHandlers = {onStart: onStart, onStop: onStop}
 
   return (
