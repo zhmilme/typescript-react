@@ -28,7 +28,7 @@ function JSON_constructor() {
   }
 
   const onStart = () => {
-    setActiveDrags(++activeDrags);
+    setActiveDrags(activeDrags + 1);
   }
 
   const onStop = () => {
