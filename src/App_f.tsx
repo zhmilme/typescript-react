@@ -16,8 +16,8 @@ import Grow from '@mui/material/Grow';
 
 
 function JSON_constructor() {
-  const [activeDrags, setActiveDrags] = UseState(0)
-  const [deltaPosition, setDeltaPosition] = UseState({x: 0, y:0})
+  const [activeDrags, setActiveDrags] = useState(0)
+  const [deltaPosition, setDeltaPosition] = useState({x: 0, y:0})
 
   const handleDrag = (e: any, ui: any) => {
     const {x, y} = deltaPosition;
