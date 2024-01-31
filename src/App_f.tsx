@@ -3,17 +3,11 @@ import * as React from 'react'
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
 import Draggable, {DraggableCore} from 'react-draggable'; 
-//import Select from 'react-dropdown-select'
-//import { Select, selectClasses } from '@mui/base/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { Option } from '@mui/base/Option';
 import Collapse from '@mui/material/Collapse';
 import Grow from '@mui/material/Grow';
-//import SplitPane, { Pane } from 'split-pane-react';
-//import 'split-pane-react/esm/themes/default.css';
-//import BasicSelect from './select';
-
 
 function JSON_constructor() {
   const [activeDrags, setActiveDrags] = useState(0)
@@ -50,23 +44,11 @@ function JSON_constructor() {
   const onDropAreaMouseLeave = (e: any) => {
     e.target.classList.remove('hovered');
   };
-
-  /*onControlledDrag = (e: any, position: any) => {
-    const {x, y} = position;
-    this.setState({controlledPosition: {x, y}});
-  };
-
-  onControlledDragStop = (e: any, position: any) => {
-    this.onControlledDrag(e, position);
-    this.onStop();
-  };*/
-  //[age, setAge] = this.useState('');
-
   const handleChange = (event: SelectChangeEvent) => {
         setAge(event.target.value);
       };
   const dragHandlers = {onStart: onStart, onStop: onStop}
-  //const {deltaPosition, controlledPosition} = this.state
+
   return (
       <div>
           <div>
@@ -157,9 +139,7 @@ function JSON_constructor() {
 export default function App() {
     return (
         <main style={{ background: "grey", height: "1000px", width: "1000px"}}>
-
-                      <JSON_constructor/>
-
+            <JSON_constructor/>
         </main>
     )
 }
