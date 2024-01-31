@@ -20,4 +20,5 @@ https://phuoc.ng/collection/react-drag-drop/
 https://www.airplane.dev/blog/how-to-use-the-react-draggable-component  
 https://www.tamalweb.com/json-reactjs  
 https://styled-components.com/docs/api#supported-css  
+https://css-tricks.com/snippets/css/glowing-blue-input-highlights/  
 
