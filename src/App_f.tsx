@@ -56,10 +56,10 @@ function JSON_constructor() {
     if (activeDrags) {
       e.target.classList.add('hovered');
     }
-  }
+  };
   onDropAreaMouseLeave = (e: any) => {
     e.target.classList.remove('hovered');
-  }
+  };
 
   /*onControlledDrag = (e: any, position: any) => {
     const {x, y} = position;
