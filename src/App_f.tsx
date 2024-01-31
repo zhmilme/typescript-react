@@ -75,10 +75,10 @@ function JSON_constructor() {
   handleChange = (event: SelectChangeEvent) => {
         this.setState({age: event.target.value, set: true});
       };*/
-
+  const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
+  const {deltaPosition, controlledPosition} = this.state;
   render() {
-    const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
-    const {deltaPosition, controlledPosition} = this.state;
+    
     return (
       <div>
           <div>
