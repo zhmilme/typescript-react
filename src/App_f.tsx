@@ -62,7 +62,7 @@ function JSON_constructor() {
   };*/
   //[age, setAge] = this.useState('');
 
-  handleChange = (event: SelectChangeEvent) => {
+  const handleChange = (event: SelectChangeEvent) => {
         setAge(event.target.value);
       };
   const dragHandlers = {onStart: onStart, onStop: onStop}
