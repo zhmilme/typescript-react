@@ -18,6 +18,7 @@ import Grow from '@mui/material/Grow';
 function JSON_constructor() {
   const [activeDrags, setActiveDrags] = useState(0)
   const [deltaPosition, setDeltaPosition] = useState({x: 0, y:0})
+  const [age, setAge] = useState('')
 
   const handleDrag = (e: any, ui: any) => {
     const {x, y} = deltaPosition;
@@ -32,10 +33,10 @@ function JSON_constructor() {
   }
 
   const onStop = () => {
-    setActiveDrags(--activeDrags);
+    setActiveDrags(activeDrags - 1);
   }
   const onDrop = (e: any) => {
-    setActiveDrags(--activeDrags);
+    setActiveDrags(activeDrags - 1);
     if (e.target.classList.contains("drop-target")) {
       alert("Dropped!");
       e.target.classList.remove('hovered');
@@ -58,12 +59,12 @@ function JSON_constructor() {
   onControlledDragStop = (e: any, position: any) => {
     this.onControlledDrag(e, position);
     this.onStop();
-  };
+  };*/
   //[age, setAge] = this.useState('');
 
   handleChange = (event: SelectChangeEvent) => {
-        this.setState({age: event.target.value, set: true});
-      };*/
+        setAge(event.target.value);
+      };
   const dragHandlers = {onStart: onStart, onStop: onStop}
   //const {deltaPosition, controlledPosition} = this.state
   return (
@@ -75,9 +76,9 @@ function JSON_constructor() {
                       <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
-                        value={this.state.age as string}
+                        value={age as string}
                         label="Age"
-                        onChange={this.handleChange}
+                        onChange={handleChange}
                         displayEmpty
                         style={{top: "80px", left: "20px"}}
                       >
@@ -98,7 +99,7 @@ function JSON_constructor() {
                       </div>
                   </div>
                 </Draggable>
-                <Draggable onDrag={this.handleDrag} {...dragHandlers}>
+                <Draggable onDrag={handleDrag} {...dragHandlers}>
                     <svg width="72px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" opacity='1'>
                         <g>
                             <path style={{fill: 'rgb(216, 216, 216)', stroke: 'rgb(0, 0, 0)'}} d="M 2 2 L 62 2 L 62 37.099 C 56.532 37.099 52.099 41.532 52.099 47 C 52.099 52.468 56.532 56.901 62 56.901 L 62 92 L 2 92 Z"></path>
@@ -106,16 +107,9 @@ function JSON_constructor() {
                     </svg>
 
                 </Draggable>
-                <Draggable position={controlledPosition}  onDrag={this.onControlledDrag} {...dragHandlers}>
-                        <svg width="162px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" opacity='1'>
-                            <g>    
-                                <path style={{fill: 'rgb(216, 216, 216)', stroke: 'rgb(0, 0, 0)'}} d="M 10.644 2 L 140.644 2 L 140.644 92 L 10.644 92 L 10.644 56.901 C 5.176 56.901 0.743 52.468 0.743 47 C 0.743 41.532 5.176 37.099 10.644 37.099 L 10.644 2 Z"></path>
-                            </g>
-                        </svg>
-                </Draggable>
 
         </div>
-        <Draggable onDrag={this.handleDrag} {...dragHandlers}>
+        <Draggable onDrag={handleDrag} {...dragHandlers}>
            <div>           
                 <svg width="162px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" opacity='1'>
                       <g>    
@@ -125,9 +119,9 @@ function JSON_constructor() {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={this.state.age as string}
+                value={age as string}
                 label="Age"
-                onChange={this.handleChange}
+                onChange={handleChange}
                 displayEmpty
                 style={{top: "-50px", left: "-130px"}}
               >
@@ -143,9 +137,9 @@ function JSON_constructor() {
           <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={this.state.age as string}
+              value={age as string}
               label="Age"
-              onChange={this.handleChange}
+              onChange={handleChange}
               displayEmpty
           >
               <MenuItem disabled value="">
