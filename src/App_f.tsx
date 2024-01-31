@@ -34,8 +34,7 @@ function JSON_constructor() {
     setDeltaPosition({
         x: x + ui.deltaX,
         y: y + ui.deltaY,
-      }
-    );
+      });
   };
 
   onStart = () => {
@@ -78,7 +77,7 @@ function JSON_constructor() {
   const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
   const {deltaPosition, controlledPosition} = this.state;
   render() {
-    
+           ;
     return (
       <div>
           <div>
