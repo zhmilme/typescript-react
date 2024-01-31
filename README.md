@@ -16,9 +16,5 @@ https://mui.com/base-ui/react-select/
 https://react-components.vercel.app/  
 https://www.npmjs.com/package/react-split-pane   
 https://mui.com/material-ui/react-radio-button/  
-https://phuoc.ng/collection/react-drag-drop/)https://mui.com/base-ui/react-select/  
-https://react-components.vercel.app/  
-https://www.npmjs.com/package/react-split-pane  
-https://mui.com/material-ui/react-radio-button/  
-https://phuoc.ng/collection/react-drag-drop/  
+https://phuoc.ng/collection/react-drag-drop/)  
 https://www.airplane.dev/blog/how-to-use-the-react-draggable-component  
