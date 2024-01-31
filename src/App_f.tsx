@@ -113,32 +113,7 @@ function JSON_constructor() {
                             </g>
                         </svg>
                 </Draggable>
-                <Draggable position= {{x: controlledPosition.x - 140, y: controlledPosition.y - 30}} onStart={() => false}>
-                    <Select
-                        displayEmpty
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={this.state.age as string}
-                        label="Age"
-                        onChange={this.handleChange}
-                    >
-                        <MenuItem disabled value="">
-                          <em>Placeholder</em>
-                        </MenuItem>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-                </Draggable>
-              <Draggable position= {{x: controlledPosition.x + 211, y: controlledPosition.y - 117}} onStart={() => false}>
-                  <Collapse orientation="horizontal" in={this.state.set}>
-                   <svg width="162px" height="94px" version="1.1" xmlns="http://www.w3.org/2000/svg" opacity='1'>
-                       <g>
-                           <path style={{fill: 'rgb(216, 216, 216)', stroke: 'rgb(0, 0, 0)'}} d="M 2 2 H 132 V 92 H 2 V 2 Z"></path>
-                       </g>
-                   </svg>
-                  </Collapse>
-              </Draggable>
+
         </div>
         <Draggable onDrag={this.handleDrag} {...dragHandlers}>
            <div>           
