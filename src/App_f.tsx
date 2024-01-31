@@ -18,18 +18,8 @@ import Grow from '@mui/material/Grow';
 function JSON_constructor() {
   const [activeDrags, setActiveDrags] = UseState(0)
   const [deltaPosition, setDeltaPosition] = UseState({x: 0, y:0})
-  /*state = {
-    activeDrags: 0,
-    deltaPosition: {
-      x: 0, y: 0
-    },
-    controlledPosition: {
-      x: -0, y: 0
-    },
-    age: '',
-    set: false
-  };*/
-  handleDrag = (e: any, ui: any) => {
+
+  const handleDrag = (e: any, ui: any) => {
     const {x, y} = deltaPosition;
     setDeltaPosition({
         x: x + ui.deltaX,
@@ -37,26 +27,26 @@ function JSON_constructor() {
       })
   }
 
-  onStart = () => {
+  const onStart = () => {
     setActiveDrags(++activeDrags);
   }
 
-  onStop = () => {
+  const onStop = () => {
     setActiveDrags(--activeDrags);
   }
-  onDrop = (e: any) => {
+  const onDrop = (e: any) => {
     setActiveDrags(--activeDrags);
     if (e.target.classList.contains("drop-target")) {
       alert("Dropped!");
       e.target.classList.remove('hovered');
     }
   }
-  onDropAreaMouseEnter = (e: any) => {
+  const onDropAreaMouseEnter = (e: any) => {
     if (activeDrags) {
       e.target.classList.add('hovered');
     }
   };
-  onDropAreaMouseLeave = (e: any) => {
+  const onDropAreaMouseLeave = (e: any) => {
     e.target.classList.remove('hovered');
   };
 
@@ -74,7 +64,7 @@ function JSON_constructor() {
   handleChange = (event: SelectChangeEvent) => {
         this.setState({age: event.target.value, set: true});
       };*/
-  const dragHandlers = {onStart: this.onStart, onStop: this.onStop}
+  const dragHandlers = {onStart: onStart, onStop: onStop}
   //const {deltaPosition, controlledPosition} = this.state
   render() {;
            ;
