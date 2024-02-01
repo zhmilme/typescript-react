@@ -139,20 +139,20 @@ function JSON_constructor() {
             </g>
           </svg>
           <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={age as string}
+            id="demo-controlled-open-select"
+            open={open}
+            onClose={handleClose}
+            onOpen={handleOpen}
+            value={age}
             label="Age"
             onChange={handleChange}
-            displayEmpty
+            //onDrag={handleDrag}
+            //displayEmpty
             style={{ top: "-50px", left: "-130px" }}
           >
-            <MenuItem disabled value="">
-              <em>Select</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <option value={10}>Ten</option>
+            <option value={20}>Twenty</option>
+            <option value={30}>Thirty</option>
           </Select>
         </div>
       </Draggable>
