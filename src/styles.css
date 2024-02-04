@@ -3,23 +3,23 @@ body {
 }
 .container {
   position: relative;
-  background-color: grey;
+  /*background-color: grey;*/
 }
 
 .draggable {
   border: 1px solid rgb(203 213 225);
   border-radius: 0.25rem;
   height: 8rem;
-  width: 10rem;
+  /*width: 10rem;*/
 
   position: absolute;
   top: 10px;
-  left: 10px;
+  /*left: 10px;
 
   /* Center the content */
   align-items: center;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
 
   /* Indicate that the element is draggable */
   cursor: move;

@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function useDraggable() {
   const [node, setNode] = React.useState<HTMLElement>();
-  const [color, setColor] = React.useState("gray");
+  const [color, setColor] = React.useState("");
   const [{ dx, dy }, setOffset] = React.useState({
     dx: 0,
     dy: 0,
@@ -26,7 +26,7 @@ export default function useDraggable() {
       };
 
       const handleMouseUp = () => {
-        setColor("gray");
+        setColor("");
         document.removeEventListener("mousemove", handleMouseMove as any);
         document.removeEventListener("mouseup", handleMouseUp);
       };
@@ -84,3 +84,24 @@ export default function useDraggable() {
 
   return [ref];
 }
+
+export const handleOverlapCheck = (e: React.MouseEvent) => {
+  const array = Array.from(document.querySelectorAll(".draggable"));
+  array.map((item) => {
+    if (
+      item?.getBoundingClientRect().left -
+        (e.target as Element).getBoundingClientRect().left <
+      1
+    ) {
+      if (
+        !(
+          item?.getBoundingClientRect().right >
+          (e.target as Element).getBoundingClientRect().left
+        )
+      ) {
+        console.log("touched");
+      }
+    }
+  });
+  //return array;
+};
