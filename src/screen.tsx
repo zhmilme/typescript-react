@@ -12,7 +12,7 @@ import App from "./transg";
 import data from "./config.json";
 
 export default function Screen() {
-  const [sizes, setSizes] = useState(["60%", "40%", "auto"]);
+  const [sizes, setSizes] = useState([window.innerWidth * 0.6, "40%", "auto"]);
 
   const layoutCSS = {
     height: "100%",
