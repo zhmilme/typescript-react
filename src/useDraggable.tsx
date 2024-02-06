@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function useDraggable() {
   const [node, setNode] = React.useState<HTMLElement>();
-  const [color, setColor] = React.useState("");
+  const [filter, setFilter] = React.useState("");
   const [{ dx, dy }, setOffset] = React.useState({
     dx: 0,
     dy: 0,
@@ -18,7 +18,7 @@ export default function useDraggable() {
         x: e.clientX - dx,
         y: e.clientY - dy,
       };
-      setColor("red");
+      setFilter("drop-shadow(0 0 5px #1b5e20)");
       const handleMouseMove = (e: React.MouseEvent) => {
         const dx = e.clientX - startPos.x;
         const dy = e.clientY - startPos.y;
@@ -26,7 +26,7 @@ export default function useDraggable() {
       };
 
       const handleMouseUp = () => {
-        setColor("");
+        setFilter("");
         document.removeEventListener("mousemove", handleMouseMove as any);
         document.removeEventListener("mouseup", handleMouseUp);
       };
@@ -66,9 +66,9 @@ export default function useDraggable() {
   React.useEffect(() => {
     if (node) {
       node.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
-      node.style.background = color;
+      node.style.filter = filter;
     }
-  }, [node, dx, dy, color]);
+  }, [node, dx, dy, filter]);
 
   React.useEffect(() => {
     if (!node) {

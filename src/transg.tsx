@@ -4,7 +4,7 @@ import ListItem from "@mui/material/ListItem";
 import { TransitionGroup } from "react-transition-group";
 import { Root, Main, Collapsable } from "./components/items";
 import useDraggable, { handleOverlapCheck } from "./useDraggable";
-import SelectItem from "./components/select";
+import Option from "./components/options";
 import { SelectChangeEvent } from "@mui/material/Select";
 
 const FRUITS = ["10", "20", "30", "40", "50"];
@@ -31,13 +31,17 @@ export default function App() {
     return (
       <ListItem style={{ width: "130px" }}>
         <Collapsable />
-        <SelectItem func={handleAddItem} label={item} value={item} />
+        <Option func={handleAddItem} label={item} value={item} />
       </ListItem>
     );
   }
   return (
     <div ref={useDraggable()[0]}>
       <TransitionGroup style={{ display: "flex" }}>
+        <ListItem style={{ width: "130px" }}>
+          <Main />
+          <Option func={handleAddItem} label={"Условие"} value={0} type={0} />
+        </ListItem>
         {items.map((item) => (
           <Collapse
             orientation="horizontal"
