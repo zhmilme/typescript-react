@@ -6,6 +6,7 @@ export function Root() {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       opacity="1"
+      overflow="visible"
     >
       <g>
         <path
@@ -25,6 +26,7 @@ export function Main() {
       xmlns="http://www.w3.org/2000/svg"
       opacity="1"
       transform="translate(-18,0)"
+      overflow="visible"
     >
       <g>
         <path
@@ -52,7 +54,10 @@ export function Collapsable() {
     >
       <g>
         <path
-          style={{ fill: "rgb(216, 216, 216)", stroke: "rgb(0, 0, 0)" }}
+          style={{
+            fill: "rgb(216, 216, 216)",
+            stroke: "rgb(0, 0, 0)",
+          }}
           d="M 2 2 H 132 V 92 H 2 V 2 Z"
         ></path>
       </g>
