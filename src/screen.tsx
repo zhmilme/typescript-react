@@ -3,7 +3,7 @@ import SplitPane, { Pane } from "split-pane-react";
 import JsonView from "@uiw/react-json-view";
 import "react-json-view-lite/dist/index.css";
 import "split-pane-react/esm/themes/default.css";
-import useDraggable, { handleOverlapCheck } from "./useDraggable";
+import useDraggable from "./useDraggable";
 import { Root, Main, Collapsable } from "./components/items";
 import ListItem from "@mui/material/ListItem";
 import { TransitionGroup } from "react-transition-group";
