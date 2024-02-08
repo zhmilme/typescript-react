@@ -9,21 +9,8 @@ body {
 .draggable {
   border: 1px solid rgb(203 213 225);
   border-radius: 0.25rem;
-  height: 8rem;
   cursor: grab;
-  /*width: 10rem;*/
 
-  position: absolute;
-  top: 10px;
-  /*left: 10px;
-
-  /* Center the content */
-  align-items: center;
-  display: flex;
-  /*justify-content: center;*/
-
-  /* Indicate that the element is draggable */
-  cursor: move;
   user-select: none;
 }
 .active {
