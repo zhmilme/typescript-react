@@ -10,6 +10,7 @@ body {
   border: 1px solid rgb(203 213 225);
   border-radius: 0.25rem;
   height: 8rem;
+  cursor: grab;
   /*width: 10rem;*/
 
   position: absolute;
@@ -24,4 +25,8 @@ body {
   /* Indicate that the element is draggable */
   cursor: move;
   user-select: none;
+}
+.active {
+  cursor: grabbing;
+  filter: drop-shadow(0 0 15px #1b5e20);
 }
