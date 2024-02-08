@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./styles.css";
-import useDraggable, { handleOverlapCheck } from "./useDraggable";
+import useDraggable from "./useDraggable";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Collapse from "@mui/material/Collapse";
