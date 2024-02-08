@@ -6,6 +6,7 @@ import { Root, Main, Collapsable } from "./components/items";
 import useDraggable from "./useDraggable";
 import OptionItem from "./components/options";
 import { SelectChangeEvent } from "@mui/material/Select";
+import "./styles.css";
 
 const FRUITS = ["10", "20", "30", "40", "50"];
 
