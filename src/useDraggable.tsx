@@ -19,15 +19,16 @@ export default function useDraggable() {
         x: e.clientX - dx,
         y: e.clientY - dy,
       };
+      node!.className = "active";
       //setFilter("drop-shadow(0 0 7px #1b5e20)");
       //setCursor("grabbing");
-      node!.style.filter = "drop-shadow(0 0 7px #1b5e20)";
+      //node!.style.filter = "drop-shadow(0 0 7px #1b5e20)";
       const handleMouseMove = (e: React.MouseEvent) => {
         const dx = e.clientX - startPos.x;
         const dy = e.clientY - startPos.y;
         setOffset({ dx, dy });
-        node!.style.filter = "drop-shadow(0 0 15px #1b5e20)";
-        node!.className = "active";
+       //node!.style.filter = "drop-shadow(0 0 15px #1b5e20)";
+        //node!.className = "active";
         OverlapCheck(e);
       };
 
@@ -35,7 +36,7 @@ export default function useDraggable() {
         //setFilter("");
         document.removeEventListener("mousemove", handleMouseMove as any);
         document.removeEventListener("mouseup", handleMouseUp);
-        node!.style.filter = "";
+        //node!.style.filter = "";
         node!.className = "draggable";
       };
 
