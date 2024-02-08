@@ -9,6 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import { TransitionGroup } from "react-transition-group";
 import App from "./transg";
 import data from "./data.json";
+import "./styles.css";
 
 export default function Screen() {
   const [sizes, setSizes] = useState([window.innerWidth * 0.6, "40%", "auto"]);
