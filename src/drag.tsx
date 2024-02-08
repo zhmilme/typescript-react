@@ -17,7 +17,7 @@ export default function App() {
       <div
         className="draggable"
         style={{ width: "300px", height: "95px" }}
-        onMouseMove={handleOverlapCheck}
+        //onMouseMove={handleOverlapCheck}
         ref={useDraggable()[0]}
       >
         <Main />
