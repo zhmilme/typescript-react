@@ -43,7 +43,6 @@ export default function App() {
         className="draggable"
         //onMouseMove={handleOverlapCheck}
         style={{
-          cursor: "grab",
           width: "62px",
           height: "92px",
           borderStyle: "dotted",
